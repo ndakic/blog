@@ -7,7 +7,7 @@ IMAGE_FOLDER = Path(".").absolute() / "files"
 
 
 # CPU-bound function
-def sum_square(custom_range: tuple) -> int:
+def sum_square(custom_range: tuple):
     final = 0
     for i in range(custom_range[0], custom_range[1]):
         final += i * i
@@ -27,12 +27,12 @@ def timing(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         start = time.perf_counter()
-        func(*args, **kwargs)
+        result = func(*args, **kwargs)
         finish = time.perf_counter()
         print("==========================================================")
         print(f"\t\t\tFinished in {round(finish - start, 2)} seconds")
         print("==========================================================")
-
+        return result
     return wrapper
 
 
