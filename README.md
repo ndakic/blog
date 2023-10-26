@@ -5,3 +5,4 @@ Covered topics are:
 - [Python](python)
   - [Concurrency](python/concurrency)
   - [Decorators](python/decorators)
+  - [Generators](python/generators)
